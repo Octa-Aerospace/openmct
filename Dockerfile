@@ -14,7 +14,11 @@ RUN npm install -g npm@9.8.1
 
 RUN apt-get install -y git
 
-COPY . .
+RUN mkdir app
+
+COPY . /app
+
+WORKDIR /app
 
 RUN npm install
 
